@@ -227,6 +227,16 @@ Select Count (Ename)  from emp
 
 Select Edepartment  ,   Ename from emp
 
+Select Edepartment, Count (EName)
+from emp
+Group by Edepartment
+
+having count(EID) <= 1 
+
+order by 2
+
+
+Select * from emp
 
 
 -- 11. same as 8
@@ -249,5 +259,5 @@ Sp_help emp
 
 --14. Write an SQL statement to drop the Bonus column from the Employees table.
 
-Alter table emp
+Alter table emp 
 drop column Ebouns 
